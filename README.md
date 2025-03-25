@@ -57,3 +57,25 @@ To run the unit tests, use the following command **from the project root**:
 
 PYTHONPATH=. pytest tests/
 
+## Database Initialization (IMPORTANT)
+If you run the project for the first time or the database is missing, create the database tables by running:
+
+python
+from app import create_app, db
+app = create_app()
+with app.app_context():
+    db.create_all()
+exit()
+
+This will create the user table in database.db.
+
+Optional: Reset the database
+python reset_db.py
+
+Technologies Used
+- Python 3
+- Flask
+- Flask SQLAlchemy (for database and ORM)
+- Jinja2 Templates (for HTML rendering)
+- Pytest (for unit testing)
+- SQLite (as the database)

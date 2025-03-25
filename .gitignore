@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# SQLite database (optional)
+database.db
+
+# Flask instance folder if used
+instance/
+
+# MacOS system files
+.DS_Store
+
+# VSCode settings (optional)
+.vscode/
+database.db
